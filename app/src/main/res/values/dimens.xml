@@ -3,4 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="page_header_actionbar_height">50dip</dimen>
+    <dimen name="lli_inner_margin">12dp</dimen>
 </resources>

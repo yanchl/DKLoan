@@ -1,29 +1,47 @@
 package com.daikuan;
 
 import com.daikuan.R;
+import com.daikuan.util.PrefUtil;
+import com.daikuan.view.Banner;
 import com.umeng.analytics.MobclickAgent;
 import com.daikuan.util.GlobalUtil;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-public class PageSplash extends Activity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class PageSplash extends Activity implements Banner.OnBannerListener {
 
 	Handler mUIHandler;
 	ImageView mImg;
+	Banner mBanner;
+	PrefUtil prefUtil;
+	boolean isFirstrun;
+
+	List<Integer> imageUrls;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.page_splash);
+
+		prefUtil = PrefUtil.getinstance(this);
+		isFirstrun = prefUtil.getBoolean(PrefUtil.KEY_FIRST_RUN, true);
+
+
+
 		mImg = (ImageView) findViewById(R.id.background);
+		mBanner  = (Banner) findViewById(R.id.splash_banner);
 		Animation anim = AnimationUtils.loadAnimation(this,
 				R.anim.anim_splash_alpha);
-		mImg.startAnimation(anim);
+
 		anim.setAnimationListener(new Animation.AnimationListener() {
 			@Override
 			public void onAnimationStart(Animation animation) {
@@ -40,8 +58,30 @@ public class PageSplash extends Activity {
 				}
 			}
 		});
+
+
+
+		if(!isFirstrun) {
+			mImg.setVisibility(View.VISIBLE);
+			mBanner.setVisibility(View.GONE);
+			mImg.startAnimation(anim);
+		}else{
+			bannerInit();
+			mBanner.setImages(imageUrls)
+					.setOnBannerListener(this)
+					.setImageLoader(new Banner.ResImageLoader()).setAutoPlay(false).setLoopPlay(false).start();
+			mBanner.setVisibility(View.VISIBLE);
+			mImg.setVisibility(View.GONE);
+		}
 	}
 
+	private void bannerInit(){
+		imageUrls = new ArrayList<>();
+		imageUrls.add(R.drawable.daikuan_haodai);
+		imageUrls.add(R.drawable.daikuan_rong360);
+		imageUrls.add(R.drawable.ka_haodai);
+		imageUrls.add(R.drawable.ka_rong360);
+	}
 	Runnable openMain = new Runnable() {
 		@Override
 		public void run() {
@@ -60,6 +100,7 @@ public class PageSplash extends Activity {
 	void openMainPage() {
 		Intent i = new Intent();
 		i.setClass(this, MainActivity.class);
+		prefUtil.putBoolean(PrefUtil.KEY_FIRST_RUN,false);
 		startActivity(i);
 		finish();
 	}
@@ -88,4 +129,12 @@ public class PageSplash extends Activity {
 		return mUIHandler;
 	}
 
+	@Override
+	public void onBannerClick(int position) {
+		if(position == imageUrls.size()-1){
+			if (GlobalUtil.isActivityExist(PageSplash.this)) {
+				openMainPage();
+			}
+		}
+	}
 }
