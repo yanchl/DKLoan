@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarDefaultDelayBeforeFade="20000"
+        android:scrollbarFadeDuration="4000" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <ImageView
+                android:id="@+id/daikuan_haodai"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:adjustViewBounds="true"
+                android:src="@drawable/daikuan_haodai"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/daikuan_rong360"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:adjustViewBounds="true"
+                android:src="@drawable/daikuan_rong360"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ka_rong360"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ka_rong360" />
+
+            <ImageView
+                android:id="@+id/ka_haodai"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ka_haodai" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/zhaodaikuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tem_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <ImageView
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:src="@drawable/kuaisudaikuan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:text="找贷款"
+                        android:textColor="#666666"
+                        android:textSize="14dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/xindaiyuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tem_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <ImageView
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:src="@drawable/xindaijingli" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:text="信贷员抢单"
+                        android:textColor="#666666"
+                        android:textSize="14dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+     <RelativeLayout
+        android:id="@+id/tip_container"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_tip_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="可同时申请不同银行卡片"
+            android:textColor="@color/bottom_tip_text_color" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/close" />
+    </RelativeLayout> 
+
+</RelativeLayout>

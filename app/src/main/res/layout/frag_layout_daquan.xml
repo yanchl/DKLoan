@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    android:scrollbarDefaultDelayBeforeFade="20000"
+    android:scrollbarFadeDuration="4000" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <LinearLayout
+                android:id="@+id/xinyongka_shenqing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_tem_selector"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/banxinyongka" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:text="信用卡申请"
+                    android:textColor="#666666"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/zhaodaikuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_tem_selector"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/kuaisudaikuan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:text="找贷款"
+                    android:textColor="#666666"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/xindaiyuan_qiangdan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_tem_selector"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/xindaijingli" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:text="信贷员抢单"
+                    android:textColor="#666666"
+                    android:textSize="14dip" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:gravity="center_horizontal"
+            android:text="以下平台同时申请,贷款成功率100%"
+            android:textColor="#EF6668"
+            android:textSize="14dip" />
+
+        <RelativeLayout
+            android:id="@+id/d_haodaiwang"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:background="@drawable/btn_tem_selector"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <ImageView
+                android:id="@+id/logo1"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logo_haodai" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:layout_toRightOf="@+id/logo1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dip"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:layout_weight="1"
+                    android:text="@string/d_haodai"
+                    android:textColor="#666666"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="额度2千~3000万,提交申请后信贷员1对1帮您选择产品"
+                    android:textColor="#4B7AC2"
+                    android:textSize="12dip" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#FFA64C"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:layout_marginTop="5dip"
+                android:text="推荐"
+                android:textSize="12dip"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/d_rong360"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_tem_selector"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <ImageView
+                android:id="@+id/logo2"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logo_rong360" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:layout_toRightOf="@+id/logo2"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dip"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:text="@string/d_rong360"
+                    android:textColor="#666666"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有身份证就能贷,能够放款到手机"
+                    android:textColor="#4B7AC2"
+                    android:textSize="12dip" />
+            </LinearLayout>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#FFA64C"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:layout_marginTop="5dip"
+                android:text="秒批"
+                android:textSize="12dip"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/d_paipaidai"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_tem_selector"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <ImageView
+                android:id="@+id/logo3"
+                android:layout_width="45dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_paipai" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:layout_toRightOf="@+id/logo3"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:text="@string/d_paipai"
+                    android:textColor="#666666"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3千-50万无抵押纯信用贷,月费率最低0.55%,放款快"
+                    android:textColor="#4B7AC2"
+                    android:textSize="12dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/d_pinganhuipu"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_tem_selector"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <ImageView
+                android:id="@+id/logo4"
+                android:layout_width="45dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_pingan" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:layout_toRightOf="@+id/logo4"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dip"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:text="@string/d_pingan"
+                    android:textColor="#666666"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="月入3000即可申请,中国平安大品牌"
+                    android:textColor="#4B7AC2"
+                    android:textSize="12dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/d_shanyin"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_tem_selector"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <ImageView
+                android:id="@+id/logo5"
+                android:layout_width="45dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_shanyin" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:layout_toRightOf="@+id/logo5"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:gravity="center"
+                    android:text="@string/d_shanyin"
+                    android:textColor="#666666"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1万元以下免审核信用贷"
+                    android:textColor="#4B7AC2"
+                    android:textSize="12dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--
+        <RelativeLayout
+            android:id="@+id/d_mashang"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_tem_selector"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <ImageView
+                android:id="@+id/logo6"
+                android:layout_width="45dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_mashangdai" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:layout_toRightOf="@+id/logo6"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:gravity="center"
+                    android:text="@string/d_mashang"
+                    android:textColor="#666666"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="8000元以下无抵押信用贷,最快3分钟放款"
+                    android:textColor="#4B7AC2"
+                    android:textSize="12dip" />
+            </LinearLayout>
+        </RelativeLayout>
+        -->
+
+        <RelativeLayout
+            android:id="@+id/d_shoujidai"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_tem_selector"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <ImageView
+                android:id="@+id/logo7"
+                android:layout_width="45dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_shoujidai" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:layout_toRightOf="@+id/logo7"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:gravity="center"
+                    android:text="@string/d_shoujidai"
+                    android:textColor="#666666"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1万元以下分期或单期借款,最快当天放款"
+                    android:textColor="#4B7AC2"
+                    android:textSize="12dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/d_yirendai"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_tem_selector"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip" >
+
+            <ImageView
+                android:id="@+id/logo8"
+                android:layout_width="45dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_yirendai" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dip"
+                android:layout_toRightOf="@+id/logo8"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:gravity="center"
+                    android:text="@string/d_yirendai"
+                    android:textColor="#666666"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="无抵押信用贷,手续费太高,小编不推荐"
+                    android:textColor="#4B7AC2"
+                    android:textSize="12dip" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

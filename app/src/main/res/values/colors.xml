@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 顶部按下后的颜色 -->
+    <!-- <drawable name="header_item_pressed_color">#00479d</drawable> -->
+    <drawable name="header_item_pressed_color">#1c2c3f</drawable>
+    <!-- 列表 press unpress的颜色 -->
+    <drawable name="listitem_gray_unpress_color">#ffffff</drawable>
+    <drawable name="listitem_gray_pressed_color">#d7d7d7</drawable>
+    <!-- 正常白色 按下深灰色 -->
+    <drawable name="listitem_common_unpressed">#ffffff</drawable>
+    <drawable name="listitem_common_pressed">#55d4d4d4</drawable>
+    <drawable name="translucent">#00ffffff</drawable>
+    <drawable name="header_bg">#233549</drawable>
+    <drawable name="scrollbar_vertical_thumb">#00ff00</drawable>
+    <drawable name="map_checked">#e7e6e6</drawable>
+
+    <color name="red_bg">#ED606F</color>
+    <color name="bottom_black_color">#2e2e2e</color>
+    <color name="bottom_line">#b2b2b2</color>
+
+    <!-- 底部提示文字颜色 -->
+    <color name="bottom_tip_text_color">#ED606F</color>
+
+    <!-- 按钮按下效果 -->
+    <drawable name="btn_press_color">#F8F8F8</drawable>
+    <drawable name="btn_unpress_color">#ffffff</drawable>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/header_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/page_header_actionbar_height"
+        layout="@layout/page_header_area_1" />
+
+     <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/page_first_bottom_operation"
+        android:layout_marginTop="@dimen/page_header_actionbar_height" >
+    </android.support.v4.view.ViewPager> 
+     
+    <RelativeLayout
+        android:id="@+id/page_first_bottom_operation"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:background="#f8f8f8" >
+
+        <ImageView
+            android:id="@+id/top_spilt_line"
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:background="#b2b2b2" />
+
+        <LinearLayout
+            android:id="@+id/center_operation_area"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/top_spilt_line"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 设备 -->
+
+            <RelativeLayout
+                android:id="@+id/op_devices"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/yijiandaikuan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="贷款大全"
+                    android:textColor="@color/red_bg"
+                    android:textSize="14dip"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/image_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/red_bg" />
+            </RelativeLayout>
+            
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/banka"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="信用卡"
+                    android:textColor="@color/bottom_black_color"
+                    android:textSize="14dip"
+                     />
+
+                <ImageView
+                    android:id="@+id/image_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/red_bg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/bandai"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="工具箱"
+                    android:textColor="@color/bottom_black_color"
+                    android:textSize="14dip"
+                     />
+
+                <ImageView
+                    android:id="@+id/image_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/red_bg" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

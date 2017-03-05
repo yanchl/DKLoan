@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <WebView
+        android:id="@+id/page_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarDefaultDelayBeforeFade="20000"
+        android:scrollbarFadeDuration="4000"
+        />
+
+    <include layout="@layout/page_header_area_1" />
+
+    <ImageView
+        android:id="@+id/goback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="5dip"
+        android:src="@drawable/go_back" />
+
+<!--     <RelativeLayout
+        android:id="@+id/tip_container"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_tip_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="以上项目同时申请,贷款成功率100%"
+            android:textColor="@color/bottom_tip_text_color" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/close" />
+    </RelativeLayout> -->
+
+</RelativeLayout>
