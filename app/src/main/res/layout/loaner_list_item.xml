@@ -3,15 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="@drawable/btn_tem_selector"
+    android:paddingLeft="12dip"
+    android:paddingRight="12dip"
+    android:paddingTop="6dip"
+    android:paddingBottom="6dip"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:id="@+id/rl_lli_root"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_tem_selector"
-        android:paddingLeft="12dip"
-        android:paddingRight="12dip"
-        android:paddingTop="12dip">
+        android:background="@drawable/loaner_list_item_inner_background"
+        android:paddingBottom="5dp"
+        >
 
         <ImageView
             android:id="@+id/iv_lli_icon"
@@ -25,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/iv_lli_icon"
             android:textColor="#666666"
-            android:textSize="14dip"
+            android:textSize="16dip"
             android:textStyle="bold"
             android:layout_marginLeft="@dimen/lli_inner_margin"
             android:layout_alignTop="@id/iv_lli_icon"
@@ -38,6 +43,8 @@
             android:layout_toRightOf="@id/iv_lli_icon"
             android:layout_below="@id/tv_lli_name"
             android:layout_height="wrap_content"
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/lli_content_txt_size"
             tools:text="content 1"/>
         <TextView
             android:id="@+id/tv_lli_content_2"
@@ -46,6 +53,8 @@
             android:layout_below="@id/tv_lli_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/lli_content_txt_size"
             tools:text="content 2"/>
         <TextView
             android:id="@+id/tv_lli_content_3"
@@ -54,6 +63,8 @@
             android:layout_below="@id/tv_lli_content_1"
             android:layout_width="wrap_content"
             tools:text="content 3"
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/lli_content_txt_size"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/tv_lli_content_4"
@@ -61,12 +72,17 @@
             android:layout_marginLeft="@dimen/lli_inner_margin"
             android:layout_below="@id/tv_lli_content_1"
             tools:text="content 4"
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/lli_content_txt_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/tv_lli_content_5"
             android:layout_width="wrap_content"
             tools:text="content 5"
+            android:textColor="#666666"
+            android:layout_marginLeft="5dp"
+            android:textSize="@dimen/lli_content_txt_size"
             android:layout_below="@id/iv_lli_icon"
             android:layout_height="wrap_content" />
 

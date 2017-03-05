@@ -26,6 +26,6 @@
     <color name="bottom_tip_text_color">#ED606F</color>
 
     <!-- 按钮按下效果 -->
-    <drawable name="btn_press_color">#F8F8F8</drawable>
-    <drawable name="btn_unpress_color">#ffffff</drawable>
+    <drawable name="btn_press_color">#aaaaaa</drawable>
+    <drawable name="btn_unpress_color">#eeeeee</drawable>
 </resources>
