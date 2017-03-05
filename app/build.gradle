@@ -18,6 +18,27 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+
+        wandoujia {}
+        baidu {}
+        a360 {}
+        pp {}
+        qq {}
+        xiaomi {}
+        huawei {}
+        yyh {}
+        oppo {}
+        vivo {}
+        sanxing {}
+        lianxiang {}
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+    }
 }
 
 dependencies {
@@ -25,7 +46,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:appcompat-v7:25.2.0'
     testCompile 'junit:junit:4.12'
     compile 'com.umeng.analytics:analytics:latest.integration'
 }
