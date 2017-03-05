@@ -18,32 +18,6 @@
             android:paddingRight="10dip" >
 
             <ImageView
-                android:id="@+id/daikuan_haodai"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:adjustViewBounds="true"
-                android:src="@drawable/daikuan_haodai"
-                android:visibility="gone" />
-
-            <ImageView
-                android:id="@+id/daikuan_rong360"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:adjustViewBounds="true"
-                android:src="@drawable/daikuan_rong360"
-                android:visibility="gone" />
-
-            <ImageView
-                android:id="@+id/ka_rong360"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ka_rong360" />
-
-            <ImageView
                 android:id="@+id/ka_haodai"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -54,12 +28,12 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dip"
+                android:layout_marginBottom="1dip"
                 android:layout_marginTop="10dip"
                 android:orientation="horizontal" >
 
                 <LinearLayout
-                    android:id="@+id/zhaodaikuan"
+                    android:id="@+id/xianshangbanka"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dip"
@@ -79,13 +53,71 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dip"
-                        android:text="找贷款"
+                        android:text="线上办卡"
                         android:textColor="#666666"
                         android:textSize="14dip" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/xindaiyuan"
+                    android:id="@+id/yuyuebanka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tem_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <ImageView
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:src="@drawable/banxinyongka" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:text="预约办卡"
+                        android:textColor="#666666"
+                        android:textSize="14dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="1dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/jiandandai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tem_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <ImageView
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:src="@drawable/logo_mashangdai" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:text="简单贷"
+                        android:textColor="#666666"
+                        android:textSize="14dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/xindaiquan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -104,37 +136,117 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dip"
-                        android:text="信贷员抢单"
+                        android:text="信贷圈"
                         android:textColor="#666666"
                         android:textSize="14dip" />
                 </LinearLayout>
             </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/zhengxin"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="5dip"
+                android:background="#ffffff" >
+
+                <ImageView
+                    android:id="@+id/logo1"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:src="@drawable/logo_check" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:layout_toRightOf="@+id/logo1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/logo1"
+                        android:text="人民银行征信查询"
+                        android:textColor="#666666"
+                        android:textSize="14dip"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/jisuanqi"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="5dip"
+                android:background="#ffffff" >
+
+                <ImageView
+                    android:id="@+id/logo2"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:src="@drawable/jisuan" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:layout_toRightOf="@+id/logo2"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/logo1"
+                        android:text="贷款计算器"
+                        android:textColor="#666666"
+                        android:textSize="14dip"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/xinyongka_jindu"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="5dip"
+                android:background="#ffffff" >
+
+                <ImageView
+                    android:id="@+id/logo4"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:src="@drawable/logo_xinyongka" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:layout_toRightOf="@+id/logo4"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/logo1"
+                        android:text="信用卡申请进度查询"
+                        android:textColor="#666666"
+                        android:textSize="14dip"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-
-     <RelativeLayout
-        android:id="@+id/tip_container"
-        android:layout_width="fill_parent"
-        android:layout_height="35dip"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_tip_bg" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="可同时申请不同银行卡片"
-            android:textColor="@color/bottom_tip_text_color" />
-
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dip"
-            android:src="@drawable/close" />
-    </RelativeLayout> 
 
 </RelativeLayout>

@@ -79,32 +79,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:gravity="center"
-                    android:text="信用卡"
-                    android:textColor="@color/bottom_black_color"
-                    android:textSize="14dip"
-                     />
-
-                <ImageView
-                    android:id="@+id/image_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="5dip"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/red_bg" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" >
-
-                <TextView
-                    android:id="@+id/bandai"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:gravity="center"
-                    android:text="工具箱"
+                    android:text="更多功能"
                     android:textColor="@color/bottom_black_color"
                     android:textSize="14dip"
                      />
@@ -116,6 +91,31 @@
                     android:layout_alignParentBottom="true"
                     android:background="@color/red_bg" />
             </RelativeLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1" >-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/bandai"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="工具箱"-->
+                    <!--android:textColor="@color/bottom_black_color"-->
+                    <!--android:textSize="14dip"-->
+                     <!--/>-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/image_2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dip"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="@color/red_bg" />-->
+            <!--</RelativeLayout>-->
 
         </LinearLayout>
     </RelativeLayout>
