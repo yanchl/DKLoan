@@ -18,8 +18,8 @@ import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {
 
-	ImageView mImage1, mImage2, mImage3;
-	TextView mText1JianDai, mText2Daikuan, mText3Banka;
+	ImageView mImage1, mImage2;
+	TextView mText1JianDai, mText2Daikuan;
 	ViewPager mViewPager;
 	ArrayList<Fragment> mFragments;
 	MyFragmentAdapter mFragmentAdapter;
@@ -47,16 +47,16 @@ public class MainActivity extends FragmentActivity {
 		mText2Daikuan.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				mViewPager.setCurrentItem(2, false);
+				mViewPager.setCurrentItem(1, false);
 
 			}
 		});
-		mText3Banka.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				mViewPager.setCurrentItem(1, false);
-			}
-		});
+//		mText3Banka.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				mViewPager.setCurrentItem(1, false);
+//			}
+//		});
 		mViewPager
 				.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 					@Override
@@ -88,22 +88,22 @@ public class MainActivity extends FragmentActivity {
 		mHeaderTitle.setText(getString(R.string.header_title_yijiandaikuan));
 
 		mText1JianDai = (TextView) findViewById(R.id.yijiandaikuan);
-		mText2Daikuan = (TextView) findViewById(R.id.bandai);
-		mText3Banka = (TextView) findViewById(R.id.banka);
+		mText2Daikuan = (TextView) findViewById(R.id.banka);
+//		mText3Banka = (TextView) findViewById(R.id.banka);
 		mImage1 = (ImageView) findViewById(R.id.image_1);
 		mImage2 = (ImageView) findViewById(R.id.image_2);
-		mImage3 = (ImageView) findViewById(R.id.image_3);
+//		mImage3 = (ImageView) findViewById(R.id.image_3);
 		showItem1();
 		mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
-		mViewPager.setOffscreenPageLimit(3);
+		mViewPager.setOffscreenPageLimit(2);
 		if (mFragments == null) {
 			mFragments = new ArrayList<>();
 		}
 		// 正在发送定时器管理
 		mFragments.add(new PageFragDaQuan());
 		mFragments.add(new PageFragYiJianDai());
-		mFragments.add(new PageFragGongJu());
+//		mFragments.add(new PageFragGongJu());
 
 		if (mFragmentAdapter == null) {
 			mFragmentAdapter = new MyFragmentAdapter(
@@ -116,11 +116,11 @@ public class MainActivity extends FragmentActivity {
 		mText1JianDai.setTextColor(getResources().getColor(R.color.red_bg));
 		mText2Daikuan.setTextColor(getResources().getColor(
 				R.color.bottom_black_color));
-		mText3Banka.setTextColor(getResources().getColor(
-				R.color.bottom_black_color));
+//		mText3Banka.setTextColor(getResources().getColor(
+//				R.color.bottom_black_color));
 		mImage1.setVisibility(View.VISIBLE);
 		mImage2.setVisibility(View.INVISIBLE);
-		mImage3.setVisibility(View.INVISIBLE);
+//		mImage3.setVisibility(View.INVISIBLE);
 		mHeaderTitle.setText(R.string.header_title_yijiandaikuan);
 	}
 
@@ -128,11 +128,11 @@ public class MainActivity extends FragmentActivity {
 		mText1JianDai.setTextColor(getResources().getColor(
 				R.color.bottom_black_color));
 		mText2Daikuan.setTextColor(getResources().getColor(R.color.red_bg));
-		mText3Banka.setTextColor(getResources().getColor(
-				R.color.bottom_black_color));
+//		mText3Banka.setTextColor(getResources().getColor(
+//				R.color.bottom_black_color));
 		mImage1.setVisibility(View.INVISIBLE);
 		mImage2.setVisibility(View.VISIBLE);
-		mImage3.setVisibility(View.INVISIBLE);
+//		mImage3.setVisibility(View.INVISIBLE);
 		mHeaderTitle.setText(R.string.header_title_daikuan);
 	}
 
@@ -141,10 +141,10 @@ public class MainActivity extends FragmentActivity {
 				R.color.bottom_black_color));
 		mText2Daikuan.setTextColor(getResources().getColor(
 				R.color.bottom_black_color));
-		mText3Banka.setTextColor(getResources().getColor(R.color.red_bg));
+//		mText3Banka.setTextColor(getResources().getColor(R.color.red_bg));
 		mImage1.setVisibility(View.INVISIBLE);
-		mImage2.setVisibility(View.INVISIBLE);
-		mImage3.setVisibility(View.VISIBLE);
+		mImage2.setVisibility(View.VISIBLE);
+//		mImage3.setVisibility(View.VISIBLE);
 		mHeaderTitle.setText(R.string.header_title_xinyongka);
 	}
 

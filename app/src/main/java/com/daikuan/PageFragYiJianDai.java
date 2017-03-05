@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class PageFragYiJianDai extends Fragment {
 	
@@ -14,13 +15,14 @@ public class PageFragYiJianDai extends Fragment {
 			.getSimpleName();
 	
 	ViewGroup mAdContainer;
-	ImageView mDaikuanHaodai,mDaikuanRong360,mKaHaodai,mKaRong360;
-	View mCloseTip;
-	View mTipContainer;
+	ImageView mKaHaodai;
+//	View mCloseTip;
+//	View mTipContainer;
 	
 	String title_daikuan = "申请贷款";
 	String title_banka = "申请信用卡";
-	View mZhaoDaikuan,mXinDaiYuan;
+	View mXianshangbanka,mYuyuebanka,mJiandandai,mXindaiquan;
+	View mZhengxin, mJisuanqi, mLaolai, mXinyongKaJindu;
 	
 	public PageFragYiJianDai() {
 	}
@@ -49,26 +51,6 @@ public class PageFragYiJianDai extends Fragment {
 	}
 
 	private void initAction() {
-		mCloseTip.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				mTipContainer.setVisibility(View.GONE);
-			}
-		});
-		
-		mDaikuanHaodai.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_HAODAI, title_daikuan);
-			}
-		});
-		
-		mDaikuanRong360.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_RONG360, title_daikuan);
-			}
-		});
 		
 		mKaHaodai.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -76,24 +58,49 @@ public class PageFragYiJianDai extends Fragment {
 				GlobalUtil.openWebview(getActivity(), Constant.URL_XINYONGKA_HAODAI_HAODAI, title_banka);
 			}
 		});
+
 		
-		mKaRong360.setOnClickListener(new View.OnClickListener() {
+		mXianshangbanka.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.URL_XINYONGKA_RONG360, title_banka);
+				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "线上办卡");
 			}
 		});
-		
-		mZhaoDaikuan.setOnClickListener(new View.OnClickListener() {
+		mYuyuebanka.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "找贷款");
+				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "预约办卡");
 			}
 		});
-		mXinDaiYuan.setOnClickListener(new View.OnClickListener() {
+		mJiandandai.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.XinDaiYuan_url, "信贷圈");
+				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "现金白卡简单贷");
+			}
+		});
+		mXindaiquan.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "信贷圈");
+			}
+		});
+		mZhengxin.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				GlobalUtil.openWebview(getActivity(), Constant.ZhengXinUrl,
+						"查征信");
+			}
+		});
+		mXinyongKaJindu.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(getActivity(),"正在抓紧开发该功能，请等待",Toast.LENGTH_LONG).show();
+			}
+		});
+		mJisuanqi.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				GlobalUtil.openWebview(getActivity(), Constant.DaiKuanJiSuanQi, "贷款计算器");
 			}
 		});
 	}
@@ -104,14 +111,14 @@ public class PageFragYiJianDai extends Fragment {
 	}
 
 	private void initView(View view) {
-		mDaikuanHaodai = (ImageView) view.findViewById(R.id.daikuan_haodai);
-		mDaikuanRong360 = (ImageView) view.findViewById(R.id.daikuan_rong360);
 		mKaHaodai = (ImageView) view.findViewById(R.id.ka_haodai);
-		mKaRong360 = (ImageView) view.findViewById(R.id.ka_rong360);
-		mCloseTip = view.findViewById(R.id.close);
-		mTipContainer = view.findViewById(R.id.tip_container);
-		mZhaoDaikuan = view.findViewById(R.id.zhaodaikuan);
-		mXinDaiYuan = view.findViewById(R.id.xindaiyuan);
+		mXianshangbanka = view.findViewById(R.id.xianshangbanka);
+		mYuyuebanka = view.findViewById(R.id.yuyuebanka);
+		mJiandandai = view.findViewById(R.id.xianshangbanka);
+		mXindaiquan = view.findViewById(R.id.xindaiquan);
+		mZhengxin = view.findViewById(R.id.zhengxin);
+		mJisuanqi = view.findViewById(R.id.jisuanqi);
+		mXinyongKaJindu = view.findViewById(R.id.xinyongka_jindu);
 	}
 
 	@Override
