@@ -25,6 +25,20 @@ public class LoanerItem {
 
     private String url;
 
+    private String umengEventID;
+
+    public String getUmengEventID() {
+        return umengEventID;
+    }
+
+    public LoanerItem setUmengEventID(String umengEventID) {
+        this.umengEventID = umengEventID;
+        return this;
+    }
+
+    public LoanerItem(){
+        content3 = "参考日利率 :";
+    }
     public String getName() {
         return name;
     }

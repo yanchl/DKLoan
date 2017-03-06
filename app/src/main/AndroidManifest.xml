@@ -51,6 +51,7 @@
             android:name="PageSplash"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:configChanges="orientation|keyboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -81,7 +82,7 @@
         <!-- umeng meta-data -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="575425ff67e58e898e00041b" >
+            android:value="58bd0353f29d98195f000586" >
         </meta-data>
         <meta-data
             android:name="UMENG_CHANNEL" android:value="${UMENG_CHANNEL_VALUE}" >

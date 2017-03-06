@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.daikuan.R;
 import com.daikuan.adapter.LoanerListAdapter;
+import com.daikuan.util.Umeng;
 import com.daikuan.view.Banner;
 import com.daikuan.view.FullListView;
 
@@ -88,48 +89,7 @@ public class PageFragDaQuan extends Fragment implements Banner.OnBannerListener 
 		public void onClick(View v) {
 			int id = v.getId();
 			switch (id) {
-//			case R.id.xinyongka_shenqing:
-//				GlobalUtil.openWebview(getActivity(), Constant.URL_XINYONGKA_HAODAI_HAODAI, "信用卡申请");
-//				break;
-//			case R.id.zhaodaikuan:
-//				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "找贷款");
-//				break;
-//			case R.id.xindaiyuan_qiangdan:
-//				GlobalUtil.openWebview(getActivity(), Constant.XinDaiYuan_url, "信贷员抢单");
-//				break;
-//			case R.id.d_haodaiwang:
-//				GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_HAODAI, getString(R.string.d_haodai));
-//				break;
-//			case R.id.d_rong360:
-//				GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_RONG360, getString(R.string.d_rong360));
-//				break;
-//
-//			case R.id.d_paipaidai:
-//				GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_PAIPAI, getString(R.string.d_paipai),true);
-//
-//				break;
-//			case R.id.d_pinganhuipu:
-//				GlobalUtil.openWebview(getActivity(), Constant.DAIKUAN_PINGANHUIPU, getString(R.string.d_pingan));
-//
-//				break;
-//			case R.id.d_shanyin:
-//				GlobalUtil.openWebview(getActivity(), Constant.DAIKUAN_SHANYIN, getString(R.string.d_shanyin));
-//
-//				break;
-//			case R.id.d_mashang:
-//				GlobalUtil.openWebview(getActivity(), Constant.DAIKUAN_MASHANG, getString(R.string.d_shanyin));
 
-//				break;
-//			case R.id.d_shoujidai:
-//				GlobalUtil.openWebview(getActivity(), Constant.DAIKUAN_SHOUJIDAI, getString(R.string.d_shoujidai));
-//
-//				break;
-//			case R.id.d_yirendai:
-//				GlobalUtil.openWebview(getActivity(), Constant.DAIKUAN_YIRENDAI, getString(R.string.d_yirendai),true);
-//
-//				break;
-//			default:
-//				break;
 			}
 		}
 	};
@@ -140,8 +100,6 @@ public class PageFragDaQuan extends Fragment implements Banner.OnBannerListener 
 		List<Integer> bannerResIds = new ArrayList<>();
 		bannerResIds.add(R.drawable.daikuan_haodai);
 		bannerResIds.add(R.drawable.daikuan_rong360);
-		bannerResIds.add(R.drawable.ka_haodai);
-		bannerResIds.add(R.drawable.ka_rong360);
 
 		mBanner.setImageLoader(new Banner.ResImageLoader())
 				.setImages(bannerResIds)
@@ -168,14 +126,6 @@ public class PageFragDaQuan extends Fragment implements Banner.OnBannerListener 
 		mZhaoDaikuan = view.findViewById(R.id.zhaodaikuan);
 		mXinDaiYuan = view.findViewById(R.id.xindaiyuan_qiangdan);
 
-//		mHaoDai = view.findViewById(R.id.d_haodaiwang);
-//		mRong360 = view.findViewById(R.id.d_rong360);
-//		mPaiPaiDai = view.findViewById(R.id.d_paipaidai);
-//		mPingAn = view.findViewById(R.id.d_pinganhuipu);
-//		mShanyin = view.findViewById(R.id.d_shanyin);
-////		mMashangDai = view.findViewById(R.id.d_mashang);
-//		mShoujiDai = view.findViewById(R.id.d_shoujidai);
-//		mYirenDai = view.findViewById(R.id.d_yirendai);
 
 		mBanner = (Banner)view.findViewById(R.id.banner);
 		mListView = (FullListView) view.findViewById(R.id.flv_list);
@@ -212,9 +162,15 @@ public class PageFragDaQuan extends Fragment implements Banner.OnBannerListener 
 
 	@Override
 	public void onBannerClick(int position) {
-		GlobalUtil.openWebview(getActivity(), Constant.URL_SHANYIN, getString(R.string.d_shanyin));
+
 		switch (position){
 			case 0:
+				Umeng.onEvent(getContext(),Umeng.EVENTID_BANNER_1);
+				GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_HAODAI, getString(R.string.d_haodai));
+				break;
+			case 1:
+				Umeng.onEvent(getContext(),Umeng.EVENTID_BANNER_2);
+				GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_RONG360, getString(R.string.d_rong360));
 
 				break;
 		}

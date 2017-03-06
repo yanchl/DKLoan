@@ -13,6 +13,7 @@ import com.daikuan.Constant;
 import com.daikuan.GlobalUtil;
 import com.daikuan.R;
 import com.daikuan.model.LoanerItem;
+import com.daikuan.util.Umeng;
 
 import org.w3c.dom.Text;
 
@@ -42,65 +43,46 @@ public class LoanerListAdapter extends BaseAdapter{
     private void initData(){
         mData = new ArrayList<>();
         LoanerItem item = new LoanerItem();
-        item.setName("融360").setTag("推荐").setResIconId(R.drawable.logo_haodai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_DAIKUAN_RONG360);
+        item.setName("好贷网-极速贷").setTag("审批快,下款快").setResIconId(R.drawable.logo_yirendai)
+                .setContent2("0.1-3000万")
+                .setContent4(" -- ").setUmengEventID(Umeng.EVENTID_DK_HAODAI)
+                .setContent5("1千-3000万,门槛低有身份证就能贷,当天放款,大额小额均可申请,准上市公司").setUrl(Constant.URL_DAIKUAN_HAODAI);
         mData.add(item);
+
         item = new LoanerItem();
-        item.setName("好贷贷款").setTag("秒贷").setResIconId(R.drawable.logo_rong360)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_DAIKUAN_HAODAI);
+        item.setName("信而富-贷款快").setResIconId(R.drawable.logo_yirendai)
+                .setContent2("0.01-0.1万").setTag("绑卡即可下款")
+                .setContent4("0.06%").setUmengEventID(Umeng.EVENTID_DK_XINERFU)
+                .setContent5("500-6千,日息0.06%,60秒自动审批下款,绑卡就能过,准上市公司").setUrl(Constant.URL_XINERFU);
         mData.add(item);
+
         item = new LoanerItem();
-        item.setName("2345贷款王").setResIconId(R.drawable.logo_paipai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_2345_DAIKUANWANG);
+        item.setName("2345贷款王").setResIconId(R.drawable.logo_yirendai).setTag("全民免息活动中")
+                .setContent2("0.05-0.5千")
+                .setContent4("0.1%").setUmengEventID(Umeng.EVENTID_DK_2345)
+                .setContent5("500-5千,门槛低,有身份证就能借,日息0.1%,A股上市公司").setUrl(Constant.URL_2345_DAIKUANWANG);
         mData.add(item);
+
         item = new LoanerItem();
-        item.setName("现金白卡").setResIconId(R.drawable.logo_pingan)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_XIANJINBAIKA);
-//        mData.add(item);
-        item = new LoanerItem();
-        item.setName("信而富").setResIconId(R.drawable.logo_xinyongka)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_XINERFU);
+        item.setName("融360-极速贷").setResIconId(R.drawable.logo_yirendai).setTag("通过率高")
+                .setContent2("0.1-50万")
+                .setContent4(" -- ").setUmengEventID(Umeng.EVENTID_DK_360)
+                .setContent5("1千-50万,有身份证就能贷,门槛低服务好,当天放款,准上市公司").setUrl(Constant.URL_DAIKUAN_RONG360);
         mData.add(item);
+
         item = new LoanerItem();
-        item.setName("好贷网信用卡").setResIconId(R.drawable.logo_haodai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_HAODAI_XINGYONGKA_NORMAL);
-//        mData.add(item);
-        item = new LoanerItem();
-        item.setName("好贷线上信用卡").setResIconId(R.drawable.logo_yirendai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_HAODAI_XINGYONGKA_ONLING);
-//        mData.add(item);
-        item = new LoanerItem();
-        item.setName("好贷线下信用卡").setResIconId(R.drawable.logo_yirendai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_HAODAI_XINYONGKA_OFFLINE);
-//        mData.add(item);
-        item = new LoanerItem();
-        item.setName("闪银").setResIconId(R.drawable.logo_yirendai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_SHANYIN);
+        item.setName("现金白卡").setResIconId(R.drawable.logo_yirendai).setTag("拒就赔")
+                .setContent2("0.1-0.3万")
+                .setContent4("0.30%").setUmengEventID(Umeng.EVENTID_DK_BAIKA)
+                .setContent5("1000-5千,额度小,很容易申请成功,每天限1万名额参加拒就赔活动").setUrl(Constant.URL_XIANJINBAIKA);
         mData.add(item);
+
         item = new LoanerItem();
-        item.setName("信贷圈").setResIconId(R.drawable.logo_yirendai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_XINDAIQUAN);
-//        mData.add(item);
+        item.setName("闪银信用贷").setResIconId(R.drawable.logo_yirendai)
+                .setContent2("0.01-20.0万").setContent3("参考月利率 :")
+                .setContent4("1.20%").setUmengEventID(Umeng.EVENTID_DK_SHANYIN)
+                .setContent5("200-10万,官方说3分钟出额度,10万以下可尝试").setUrl(Constant.URL_SHANYIN);
+        mData.add(item);
     }
 
     @Override
@@ -138,7 +120,7 @@ public class LoanerListAdapter extends BaseAdapter{
         }else{
             holder.tag.setVisibility(View.GONE);
         }
-        holder.content1.setText(item.getContent1());
+//        holder.content1.setText(item.getContent1());
         holder.content2.setText(item.getContent2());
         holder.content3.setText(item.getContent3());
         holder.content4.setText(item.getContent4());
@@ -146,6 +128,7 @@ public class LoanerListAdapter extends BaseAdapter{
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Umeng.onEvent(mContext, item.getUmengEventID());
                 GlobalUtil.openWebview(mContext, item.getUrl(), item.getName());
             }
         });

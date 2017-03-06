@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Daikuan</string>
+    <string name="app_name">小额贷款王</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -15,4 +15,6 @@
     <string name="d_mashang">马上消费金融</string>
     <string name="d_shoujidai">手机贷</string>
     <string name="d_yirendai">宜人贷</string>
+    <string name="lli_edu">可贷额度 :</string>
+    <string name="lli_drate">参考日利率 :</string>
 </resources>

@@ -3,7 +3,4 @@
     >
     <solid
         android:color="#ffffff"/>
-    <stroke android:dashWidth="1dp"
-        android:dashGap="1dp"
-        android:color="#888888"/>
 </shape>
