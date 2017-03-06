@@ -79,10 +79,8 @@ public class PageSplash extends Activity implements Banner.OnBannerListener {
 
 	private void bannerInit(){
 		imageUrls = new ArrayList<>();
-		imageUrls.add(R.drawable.daikuan_haodai);
-		imageUrls.add(R.drawable.daikuan_rong360);
-		imageUrls.add(R.drawable.ka_haodai);
-		imageUrls.add(R.drawable.ka_rong360);
+		imageUrls.add(R.drawable.splash_page_1);
+		imageUrls.add(R.drawable.splash_page_2);
 	}
 	Runnable openMain = new Runnable() {
 		@Override
