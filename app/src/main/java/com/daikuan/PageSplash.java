@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +22,7 @@ import java.util.List;
 public class PageSplash extends Activity implements Banner.OnBannerListener {
 
 	Handler mUIHandler;
-	ImageView mImg;
+	LinearLayout splash;
 	Banner mBanner;
 	PrefUtil prefUtil;
 	boolean isFirstrun;
@@ -37,7 +39,7 @@ public class PageSplash extends Activity implements Banner.OnBannerListener {
 
 
 
-		mImg = (ImageView) findViewById(R.id.background);
+        splash = (LinearLayout) findViewById(R.id.rl_splash);
 		mBanner  = (Banner) findViewById(R.id.splash_banner);
 		Animation anim = AnimationUtils.loadAnimation(this,
 				R.anim.anim_splash_alpha);
@@ -62,25 +64,23 @@ public class PageSplash extends Activity implements Banner.OnBannerListener {
 
 
 		if(!isFirstrun) {
-			mImg.setVisibility(View.VISIBLE);
+            splash.setVisibility(View.VISIBLE);
 			mBanner.setVisibility(View.GONE);
-			mImg.startAnimation(anim);
+            splash.startAnimation(anim);
 		}else{
 			bannerInit();
 			mBanner.setImages(imageUrls)
 					.setOnBannerListener(this)
 					.setImageLoader(new Banner.ResImageLoader()).setAutoPlay(false).setLoopPlay(false).start();
 			mBanner.setVisibility(View.VISIBLE);
-			mImg.setVisibility(View.GONE);
+            splash.setVisibility(View.GONE);
 		}
 	}
 
 	private void bannerInit(){
 		imageUrls = new ArrayList<>();
-		imageUrls.add(R.drawable.daikuan_haodai);
-		imageUrls.add(R.drawable.daikuan_rong360);
-		imageUrls.add(R.drawable.ka_haodai);
-		imageUrls.add(R.drawable.ka_rong360);
+		imageUrls.add(R.drawable.splash_page_1);
+		imageUrls.add(R.drawable.splash_page_2);
 	}
 	Runnable openMain = new Runnable() {
 		@Override
