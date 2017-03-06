@@ -145,7 +145,7 @@ public class MainActivity extends FragmentActivity {
 		mImage1.setVisibility(View.INVISIBLE);
 		mImage2.setVisibility(View.VISIBLE);
 //		mImage3.setVisibility(View.VISIBLE);
-		mHeaderTitle.setText(R.string.header_title_xinyongka);
+		mHeaderTitle.setText("更多功能");
 	}
 
 	@Override

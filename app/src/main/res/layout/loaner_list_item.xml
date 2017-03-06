@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@drawable/btn_tem_selector"
+    android:background="#F2F2F2"
     android:paddingLeft="10dip"
     android:paddingRight="10dip"
     android:paddingTop="7dip"
@@ -14,7 +14,6 @@
         android:id="@+id/rl_lli_root"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="1dp"
         android:background="@drawable/loaner_list_item_inner_background"
         >
 
@@ -33,14 +32,15 @@
             android:fontFamily=""
             android:textSize="16dip"
             android:layout_marginLeft="@dimen/lli_inner_margin"
-            android:paddingTop="5dp"
+            android:paddingTop="1dp"
             android:layout_alignTop="@id/iv_lli_icon"
             tools:text="@string/d_haodai" />
 
         <TextView
             android:id="@+id/tv_lli_content_1"
             android:layout_width="wrap_content"
-            android:layout_marginLeft="@dimen/lli_inner_margin"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="3dp"
             android:layout_toRightOf="@id/iv_lli_icon"
             android:layout_below="@id/tv_lli_name"
             android:layout_height="wrap_content"
@@ -50,7 +50,8 @@
         <TextView
             android:id="@+id/tv_lli_content_2"
             android:layout_toRightOf="@id/tv_lli_content_1"
-            android:layout_marginLeft="@dimen/lli_inner_margin"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
             android:layout_below="@id/tv_lli_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +61,8 @@
         <TextView
             android:id="@+id/tv_lli_content_3"
             android:layout_toRightOf="@id/iv_lli_icon"
-            android:layout_marginLeft="@dimen/lli_inner_margin"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="3dp"
             android:layout_below="@id/tv_lli_content_1"
             android:layout_width="wrap_content"
             android:text="@string/lli_drate"
@@ -70,7 +72,8 @@
         <TextView
             android:id="@+id/tv_lli_content_4"
             android:layout_toRightOf="@id/tv_lli_content_3"
-            android:layout_marginLeft="@dimen/lli_inner_margin"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
             android:layout_below="@id/tv_lli_content_1"
             tools:text="content 4"
             android:textColor="#aaaaaa"
@@ -81,8 +84,7 @@
             android:id="@+id/tv_lli_content_5"
             android:layout_width="match_parent"
             tools:text="content 5"
-            android:textColor="#000000"
-            android:background="#e6efef"
+            android:textColor="#0099ff"
             android:padding="5dp"
             android:textSize="@dimen/lli_content_txt_size"
             android:layout_below="@id/iv_lli_icon"

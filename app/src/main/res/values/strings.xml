@@ -15,6 +15,6 @@
     <string name="d_mashang">马上消费金融</string>
     <string name="d_shoujidai">手机贷</string>
     <string name="d_yirendai">宜人贷</string>
-    <string name="lli_edu">可贷额度 :</string>
-    <string name="lli_drate">参考日利率 :</string>
+    <string name="lli_edu">贷款额度:</string>
+    <string name="lli_drate">参考日息:</string>
 </resources>

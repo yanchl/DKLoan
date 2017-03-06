@@ -37,7 +37,7 @@ public class LoanerItem {
     }
 
     public LoanerItem(){
-        content3 = "参考日利率 :";
+        content3 = "参考日息:";
     }
     public String getName() {
         return name;

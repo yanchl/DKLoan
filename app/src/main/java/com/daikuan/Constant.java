@@ -19,7 +19,7 @@ public class Constant {
 	public static String URL_XIANJINBAIKA = "http://api.51ygdai.com/act/light-loan?source_tag=H5-yjdk4";
 
 	//信而富
-	public static String URL_XINERFU = "";
+	public static String URL_XINERFU = "https://promotion.crfchina.com/localMarket/index.html?c=&s=imm3&salesmanNo=JKTZNJ0091&agentNo=JKTZNJ0091_20170103BJHL001";
 
 	// 好贷网信用卡通用
 	public static String URL_HAODAI_XINGYONGKA_NORMAL = "http://8.yun.haodai.com/?ref=hd_11016980";
@@ -35,13 +35,9 @@ public class Constant {
 
 	// 信贷圈
 	public static String URL_XINDAIQUAN="http://www.haodai.com/webxdy?ref=hd_11016980";
-
-
-
-
-	//信贷员抢单推广
-	public static String XinDaiYuan_url = "http://www.haodai.com/webxdy?ref=hd_11010141";
 	
+
+
 	/*
 	 * 工具箱URL
 	 */
