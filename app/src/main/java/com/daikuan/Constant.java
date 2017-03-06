@@ -8,39 +8,35 @@ public class Constant {
 		        "Android 3.1; en-us; Xoom Build/HMJ25) AppleWebKit/534.13 " +
 		        "(KHTML, like Gecko) Version/4.0 Safari/534.13";
 	//好贷网贷款
-	public static String URL_DAIKUAN_HAODAI = "https://loan.rongba.com/h5tuiguang/aff?ref=hd_11010141";
+	public static String URL_DAIKUAN_HAODAI = "https://loan.rongba.com/h5tuiguang/jff?ref=hd_11016980";
 	//融360贷款
-	public static String URL_DAIKUAN_RONG360="http://m.rong360.com/express?from=sem21&utm_source=kbdk&utm_medium=cpa&utm_campaign=sem21";
-	
-	//拍拍贷贷款
-	public static String URL_DAIKUAN_PAIPAI = "http://m.ppdai.com/landingcpsnew.html?regsourceid=kuaibandaikuanx01";
+	public static String URL_DAIKUAN_RONG360="https://m.rong360.com/express?from=sem21&utm_source=huile&utm_medium=cpa&utm_campaign=sem21_2";
 
-	//融360办卡
-	public static String URL_XINYONGKA_RONG360 = "http://m.rong360.com/credit/f-card?utm_source=kbdk&utm_medium=cpc_xyk&utm_campaign=card";
+	// 2345贷款无
+	public static String URL_2345_DAIKUANWANG="https://mdaikuan.2345.com/register3?channel=hj-yjdkw04_cpl_wlei";
 
-	//好贷网办卡
-	public static String URL_XINYONGKA_HAODAI_HAODAI = "http://8.yun.haodai.com/Mobile/creditcard/?ref=hd_11010141";
+	// 现金白卡
+	public static String URL_XIANJINBAIKA = "http://api.51ygdai.com/act/light-loan?source_tag=H5-yjdk4";
 
-	//找贷款链接
-	public static String FIND_DAIKUAN = "http://daikuan.shenyingyong.com";
+	//信而富
+	public static String URL_XINERFU = "";
 
-	/*
-	 * 以下为非合作贷款渠道链接
-	 */
-	//闪银
-	public static String DAIKUAN_SHANYIN= "http://ios.wecash.net/wap/simple_h5.html?";
-	
-	//手机贷
-	public static String DAIKUAN_SHOUJIDAI ="http://m.mobp2p.com/";
-	
-	//马上贷
-	public static String DAIKUAN_MASHANG = "http://www.msxf.com/";
-	
-	//宜人贷
-	public static String DAIKUAN_YIRENDAI = "https://www.yirendai.com/LandingPage/wap/ty/?";
-	
-	//平安惠普
-	public static String DAIKUAN_PINGANHUIPU = "http://www.10100000.com/m/Market/2015/customize/indexB.html?";
+	// 好贷网信用卡通用
+	public static String URL_HAODAI_XINGYONGKA_NORMAL = "http://8.yun.haodai.com/?ref=hd_11016980";
+
+	// 好贷网线上信用卡
+	public static String URL_HAODAI_XINGYONGKA_ONLING = "http://8.yun.haodai.com/Mobile/creditcard/?ref=hd_11016980";
+
+	// 好贷网线下信用卡
+	public static String URL_HAODAI_XINYONGKA_OFFLINE = "http://card.haodai.com/Mobile/credit/?ref=hd_11016980";
+
+	// 闪银
+	public static String URL_SHANYIN="http://m.wecash.net/wep/share/simple_h5.html?version=h5&channelId=5695&channelCode=11553a";
+
+	// 信贷圈
+	public static String URL_XINDAIQUAN="http://www.haodai.com/webxdy?ref=hd_11016980";
+
+
 
 
 	//信贷员抢单推广

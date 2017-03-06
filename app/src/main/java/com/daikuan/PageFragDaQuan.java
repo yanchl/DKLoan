@@ -212,9 +212,10 @@ public class PageFragDaQuan extends Fragment implements Banner.OnBannerListener 
 
 	@Override
 	public void onBannerClick(int position) {
+		GlobalUtil.openWebview(getActivity(), Constant.URL_SHANYIN, getString(R.string.d_shanyin));
 		switch (position){
 			case 0:
-				GlobalUtil.openWebview(getActivity(), Constant.DAIKUAN_SHANYIN, getString(R.string.d_shanyin));
+
 				break;
 		}
 	}

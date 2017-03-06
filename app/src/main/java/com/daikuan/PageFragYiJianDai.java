@@ -55,33 +55,33 @@ public class PageFragYiJianDai extends Fragment {
 		mKaHaodai.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.URL_XINYONGKA_HAODAI_HAODAI, title_banka);
+				GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINGYONGKA_NORMAL, title_banka);
 			}
 		});
 
-		
+
 		mXianshangbanka.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "线上办卡");
+				GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINGYONGKA_ONLING, "线上办卡");
 			}
 		});
 		mYuyuebanka.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "预约办卡");
+				GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINYONGKA_OFFLINE, "预约办卡");
 			}
 		});
 		mJiandandai.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "现金白卡简单贷");
+				GlobalUtil.openWebview(getActivity(), Constant.URL_XIANJINBAIKA, "现金白卡简单贷");
 			}
 		});
 		mXindaiquan.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.FIND_DAIKUAN, "信贷圈");
+				GlobalUtil.openWebview(getActivity(), Constant.URL_XINDAIQUAN, "信贷圈");
 			}
 		});
 		mZhengxin.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +114,7 @@ public class PageFragYiJianDai extends Fragment {
 		mKaHaodai = (ImageView) view.findViewById(R.id.ka_haodai);
 		mXianshangbanka = view.findViewById(R.id.xianshangbanka);
 		mYuyuebanka = view.findViewById(R.id.yuyuebanka);
-		mJiandandai = view.findViewById(R.id.xianshangbanka);
+		mJiandandai = view.findViewById(R.id.jiandandai);
 		mXindaiquan = view.findViewById(R.id.xindaiquan);
 		mZhengxin = view.findViewById(R.id.zhengxin);
 		mJisuanqi = view.findViewById(R.id.jisuanqi);

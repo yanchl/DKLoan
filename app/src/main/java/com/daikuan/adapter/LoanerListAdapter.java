@@ -42,47 +42,65 @@ public class LoanerListAdapter extends BaseAdapter{
     private void initData(){
         mData = new ArrayList<>();
         LoanerItem item = new LoanerItem();
-        item.setName("好贷网贷款").setTag("推荐").setResIconId(R.drawable.logo_haodai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_DAIKUAN_HAODAI);
-        mData.add(item);
-        item = new LoanerItem();
-        item.setName("融360贷款").setTag("秒贷").setResIconId(R.drawable.logo_rong360)
+        item.setName("融360").setTag("推荐").setResIconId(R.drawable.logo_haodai)
                 .setContent1("content1").setContent2("content2")
                 .setContent3("content 3").setContent4("content 4")
                 .setContent5("额度很高呀").setUrl(Constant.URL_DAIKUAN_RONG360);
         mData.add(item);
         item = new LoanerItem();
-        item.setName("拍拍贷").setResIconId(R.drawable.logo_paipai)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_DAIKUAN_PAIPAI);
-        mData.add(item);
-        item = new LoanerItem();
-        item.setName("平安惠普").setResIconId(R.drawable.logo_pingan)
-                .setContent1("content1").setContent2("content2")
-                .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.DAIKUAN_PINGANHUIPU);
-        mData.add(item);
-        item = new LoanerItem();
-        item.setName("闪银信用贷").setResIconId(R.drawable.logo_xinyongka)
+        item.setName("好贷贷款").setTag("秒贷").setResIconId(R.drawable.logo_rong360)
                 .setContent1("content1").setContent2("content2")
                 .setContent3("content 3").setContent4("content 4")
                 .setContent5("额度很高呀").setUrl(Constant.URL_DAIKUAN_HAODAI);
         mData.add(item);
         item = new LoanerItem();
-        item.setName("好贷网贷款").setResIconId(R.drawable.logo_haodai)
+        item.setName("2345贷款王").setResIconId(R.drawable.logo_paipai)
                 .setContent1("content1").setContent2("content2")
                 .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_DAIKUAN_HAODAI);
+                .setContent5("额度很高呀").setUrl(Constant.URL_2345_DAIKUANWANG);
         mData.add(item);
         item = new LoanerItem();
-        item.setName("宜人贷").setResIconId(R.drawable.logo_yirendai)
+        item.setName("现金白卡").setResIconId(R.drawable.logo_pingan)
                 .setContent1("content1").setContent2("content2")
                 .setContent3("content 3").setContent4("content 4")
-                .setContent5("额度很高呀").setUrl(Constant.URL_XINYONGKA_HAODAI_HAODAI);
+                .setContent5("额度很高呀").setUrl(Constant.URL_XIANJINBAIKA);
+//        mData.add(item);
+        item = new LoanerItem();
+        item.setName("信而富").setResIconId(R.drawable.logo_xinyongka)
+                .setContent1("content1").setContent2("content2")
+                .setContent3("content 3").setContent4("content 4")
+                .setContent5("额度很高呀").setUrl(Constant.URL_XINERFU);
         mData.add(item);
+        item = new LoanerItem();
+        item.setName("好贷网信用卡").setResIconId(R.drawable.logo_haodai)
+                .setContent1("content1").setContent2("content2")
+                .setContent3("content 3").setContent4("content 4")
+                .setContent5("额度很高呀").setUrl(Constant.URL_HAODAI_XINGYONGKA_NORMAL);
+//        mData.add(item);
+        item = new LoanerItem();
+        item.setName("好贷线上信用卡").setResIconId(R.drawable.logo_yirendai)
+                .setContent1("content1").setContent2("content2")
+                .setContent3("content 3").setContent4("content 4")
+                .setContent5("额度很高呀").setUrl(Constant.URL_HAODAI_XINGYONGKA_ONLING);
+//        mData.add(item);
+        item = new LoanerItem();
+        item.setName("好贷线下信用卡").setResIconId(R.drawable.logo_yirendai)
+                .setContent1("content1").setContent2("content2")
+                .setContent3("content 3").setContent4("content 4")
+                .setContent5("额度很高呀").setUrl(Constant.URL_HAODAI_XINYONGKA_OFFLINE);
+//        mData.add(item);
+        item = new LoanerItem();
+        item.setName("闪银").setResIconId(R.drawable.logo_yirendai)
+                .setContent1("content1").setContent2("content2")
+                .setContent3("content 3").setContent4("content 4")
+                .setContent5("额度很高呀").setUrl(Constant.URL_SHANYIN);
+        mData.add(item);
+        item = new LoanerItem();
+        item.setName("信贷圈").setResIconId(R.drawable.logo_yirendai)
+                .setContent1("content1").setContent2("content2")
+                .setContent3("content 3").setContent4("content 4")
+                .setContent5("额度很高呀").setUrl(Constant.URL_XINDAIQUAN);
+//        mData.add(item);
     }
 
     @Override
