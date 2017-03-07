@@ -10,6 +10,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -203,7 +204,9 @@ public class PageWebview extends Activity {
 			@Override
 			public void onDownloadStart(String url, String userAgent,
 					String contentDisposition, String mimetype, long contentLength) {
-				
+				Uri uri = Uri.parse(url);
+				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				startActivity(intent);
 			}
 		});
 
