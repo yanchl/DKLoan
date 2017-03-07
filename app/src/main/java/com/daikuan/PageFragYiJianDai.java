@@ -55,7 +55,7 @@ public class PageFragYiJianDai extends Fragment {
 		mKaHaodai.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINGYONGKA_NORMAL, title_banka);
+				GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINGYONGKA_NORMAL, title_banka,true);
 			}
 		});
 
@@ -75,7 +75,7 @@ public class PageFragYiJianDai extends Fragment {
 		mJiandandai.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				GlobalUtil.openWebview(getActivity(), Constant.URL_XIANJINBAIKA, "现金白卡简单贷");
+				GlobalUtil.openWebview(getActivity(), Constant.URL_XIANJINBAIKA, "现金白卡简单贷",true);
 			}
 		});
 		mXindaiquan.setOnClickListener(new View.OnClickListener() {

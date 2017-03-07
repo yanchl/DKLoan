@@ -27,6 +27,8 @@ public class LoanerItem {
 
     private String umengEventID;
 
+    private Boolean isMagrinTop;
+
     public String getUmengEventID() {
         return umengEventID;
     }
@@ -123,4 +125,14 @@ public class LoanerItem {
         this.url = url;
         return this;
     }
+
+    public Boolean getMagrinTop() {
+        return isMagrinTop;
+    }
+
+    public LoanerItem setMagrinTop(Boolean magrinTop) {
+        isMagrinTop = magrinTop;
+        return this;
+    }
+
 }
