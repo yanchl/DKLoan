@@ -1,97 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:background="#F2F2F2"
-    android:paddingLeft="10dip"
-    android:paddingRight="10dip"
-    android:paddingTop="7dip"
-    android:paddingBottom="7dip"
-    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/rl_lli_root"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="#F2F2F2"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/d_haodaiwang"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/loaner_list_item_inner_background"
-        >
+        android:background="@drawable/btn_tem_selector"
+        android:paddingLeft="12dip"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
-        <ImageView
-            android:id="@+id/iv_lli_icon"
-            android:layout_width="64dip"
-            android:layout_height="64dip"
-            tools:src="@drawable/logo_yirendai" />
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_centerVertical="true" />
 
-        <TextView
-            android:id="@+id/tv_lli_name"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/iv_lli_icon"
-            android:textColor="#000000"
-            android:fontFamily=""
-            android:textSize="16dip"
-            android:layout_marginLeft="@dimen/lli_inner_margin"
-            android:paddingTop="1dp"
-            android:layout_alignTop="@id/iv_lli_icon"
-            tools:text="@string/d_haodai" />
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dip"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:layout_toRightOf="@+id/logo1"
+                android:layout_weight="1"
+                android:text="@string/d_haodai"
+                android:textColor="#666666"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="12dp"
+                android:text="额度2千~3000万,提交申请后专业信贷员1对1帮您选择产品"
+                android:textColor="#4B7AC2"
+                android:textSize="12dip" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_lli_content_1"
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="3dp"
-            android:layout_toRightOf="@id/iv_lli_icon"
-            android:layout_below="@id/tv_lli_name"
-            android:layout_height="wrap_content"
-            android:textColor="#aaaaaa"
-            android:textSize="@dimen/lli_content_txt_size"
-            android:text="@string/lli_edu"/>
-        <TextView
-            android:id="@+id/tv_lli_content_2"
-            android:layout_toRightOf="@id/tv_lli_content_1"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="3dp"
-            android:layout_below="@id/tv_lli_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#aaaaaa"
-            android:textSize="@dimen/lli_content_txt_size"
-            tools:text="content 2"/>
-        <TextView
-            android:id="@+id/tv_lli_content_3"
-            android:layout_toRightOf="@id/iv_lli_icon"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="3dp"
-            android:layout_below="@id/tv_lli_content_1"
-            android:layout_width="wrap_content"
-            android:text="@string/lli_drate"
-            android:textColor="#aaaaaa"
-            android:textSize="@dimen/lli_content_txt_size"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_lli_content_4"
-            android:layout_toRightOf="@id/tv_lli_content_3"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="3dp"
-            android:layout_below="@id/tv_lli_content_1"
-            tools:text="content 4"
-            android:textColor="#aaaaaa"
-            android:textSize="@dimen/lli_content_txt_size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_lli_content_5"
-            android:layout_width="match_parent"
-            tools:text="content 5"
-            android:textColor="#0099ff"
-            android:padding="5dp"
-            android:textSize="@dimen/lli_content_txt_size"
-            android:layout_below="@id/iv_lli_icon"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/tv_lli_tag"
+            android:id="@+id/tv_tag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -99,9 +66,15 @@
             android:background="#FFA64C"
             android:paddingLeft="5dip"
             android:paddingRight="5dip"
-            android:layout_marginTop="5dip"
-            android:text="推荐"
-            android:textSize="12dip"
-            android:textColor="#ffffff" />
+            android:layout_marginRight="2dp"
+            android:text="审核快,门槛低，选择多"
+            android:textColor="#ffffff"
+            android:textSize="12dip" />
     </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:background="#F2F2F2"/>
+
 </LinearLayout>

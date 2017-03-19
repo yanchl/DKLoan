@@ -19,6 +19,8 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.bmob.v3.Bmob;
+
 public class PageSplash extends Activity implements Banner.OnBannerListener {
 
 	Handler mUIHandler;
@@ -33,6 +35,9 @@ public class PageSplash extends Activity implements Banner.OnBannerListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.page_splash);
+
+
+		Bmob.initialize(this, "89f07250e047b078a80e40d2180bb5e6");
 
 		prefUtil = PrefUtil.getinstance(this);
 		isFirstrun = prefUtil.getBoolean(PrefUtil.KEY_FIRST_RUN, true);

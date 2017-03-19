@@ -12,6 +12,7 @@ import com.daikuan.view.Banner;
  * Why & What modified:
  */
 
+@Deprecated
 public class LoanerItem {
 
     private String name;

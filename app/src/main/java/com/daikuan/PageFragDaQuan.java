@@ -105,7 +105,7 @@ public class PageFragDaQuan extends Fragment implements Banner.OnBannerListener 
 				.setImages(bannerResIds)
 				.setOnBannerListener(this).start();
 
-		mAdapter = new LoanerListAdapter(getActivity());
+		mAdapter = new LoanerListAdapter(getActivity(),null);
 	}
 
 	private void initView(View view) {

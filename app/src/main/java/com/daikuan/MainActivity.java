@@ -101,7 +101,7 @@ public class MainActivity extends FragmentActivity {
 			mFragments = new ArrayList<>();
 		}
 		// 正在发送定时器管理
-		mFragments.add(new PageFragDaQuan());
+		mFragments.add(new PageFragDKTuijian());
 		mFragments.add(new PageFragYiJianDai());
 //		mFragments.add(new PageFragGongJu());
 
