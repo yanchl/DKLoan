@@ -48,5 +48,19 @@ public class Constant {
 	
 	//老赖查询
 	public static String LaoLaiUrl = "http://kuaicha.info/lawMobile/law.html";
-	
+
+	//社保
+	public static String URL_SHEBAO = "https://shebao.haodai.com/#/?refer=yun&channel=hd_11016980";
+
+	//彩票
+	public static String URL_CAIPIAP = "https://yun.haodai.com/Lottery/to?ref=hd_11016980";
+
+    //保险
+    public static String URL_BAOXIAN = "https://baoxian.haodai.com/?media=yun&ref=hd_11016980";
+
+	//账户保险
+	public static String BAOXIAN_ZHANGHU = "http://spread.wecash.net/account/register.html?change=true&source=35&channel=daikuanwang1";
+
+	//出行保险
+	public static String BAOXIAN_CHUXING = "http://spread.wecash.net/travel/index.html?change=true&source=34&channel=daikuanwangcx1";
 }

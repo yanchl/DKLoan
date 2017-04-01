@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/page_header_actionbar_height"
+        layout="@layout/page_header_area_1" />
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/rv_empty_category"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/flag_empty_category"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/iv_empty_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/flag_empty_category"
+                android:src="@drawable/net_error" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/flag_empty_category"
+                android:layout_centerHorizontal="true"
+                android:text="网络出错，请点击重连"
+                android:textColor="@color/red_bg" />
+
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/flv_list_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00ffffff"
+            android:dividerHeight="0dp" />
+
+
+    </RelativeLayout>
+</LinearLayout>
+

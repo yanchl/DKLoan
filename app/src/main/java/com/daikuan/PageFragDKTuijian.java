@@ -10,6 +10,7 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.daikuan.adapter.LoanerListAdapter;
+import com.daikuan.adapter.RecommendLoanerListAdapter;
 import com.daikuan.model.DKRecommend;
 import com.daikuan.model.LoanItem;
 import com.daikuan.util.NetworkUtil;
@@ -52,7 +53,7 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
     View errorView;
 
     FullListView mListView;
-    LoanerListAdapter mAdapter;
+    RecommendLoanerListAdapter mAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,10 +77,6 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
     }
 
     private void initAction() {
-        mXinyongkaShenqing.setOnClickListener(mListener);
-        mZhaoDaikuan.setOnClickListener(mListener);
-        mXinDaiYuan.setOnClickListener(mListener);
-
 
         mBanner.setFocusable(true);
         mBanner.setFocusableInTouchMode(true);
@@ -99,12 +96,15 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
 
     private void initData() {
 
-        if(!NetworkUtil.isNetworkAvailable(getActivity())){
+        if (!NetworkUtil.isNetworkAvailable(getActivity())) {
             contentLv.setVisibility(View.GONE);
             errorView.setVisibility(View.VISIBLE);
-            Toast.makeText(getActivity(),"当前网络有问题",Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "当前网络有问题", Toast.LENGTH_LONG).show();
             return;
         }
+
+        contentLv.setVisibility(View.VISIBLE);
+        errorView.setVisibility(View.GONE);
 
 
         // 广点通广告，只在应用宝渠道保留
@@ -112,6 +112,8 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
         List<Integer> bannerResIds = new ArrayList<>();
         bannerResIds.add(R.drawable.daikuan_haodai);
         bannerResIds.add(R.drawable.daikuan_rong360);
+        bannerResIds.add(R.drawable.banner_caipiao);
+        bannerResIds.add(R.drawable.banner_shebao);
 
         mBanner.setImageLoader(new Banner.ResImageLoader())
                 .setImages(bannerResIds)
@@ -130,13 +132,15 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
                     if (list != null) {
                         List<LoanItem> loanItems = new ArrayList<LoanItem>();
                         for (DKRecommend dkRecommend : list) {
-                            loanItems.add(dkRecommend.getLoan());
+                            if(dkRecommend.getLoan() != null){
+                                loanItems.add(dkRecommend.getLoan());
+                            }
                         }
 
-                        mAdapter = new LoanerListAdapter(getActivity(), loanItems);
+                        mAdapter = new RecommendLoanerListAdapter(getActivity(), loanItems);
 
                         mListView.setAdapter(mAdapter);
-                    }else{
+                    } else {
                         contentLv.setVisibility(View.GONE);
                         errorView.setVisibility(View.VISIBLE);
                     }
@@ -144,7 +148,7 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
                 } else {
                     contentLv.setVisibility(View.GONE);
                     errorView.setVisibility(View.VISIBLE);
-                    Toast.makeText(getActivity(),"获取服务端资料出错:"+e.toString(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "获取服务端资料出错:" + e.toString(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -154,13 +158,12 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
 
     private void initView(View view) {
 
-        mXinyongkaShenqing = view.findViewById(R.id.xinyongka_shenqing);
 
 		/*
          * 信用卡申请，找贷款，信贷员推广
 		 */
         // View mXinyongkaShenqing,mZhaoDaikuan,mXinDaiYuan;
-		/*
+        /*
 		 * 各大贷款渠道
 		 */
         // View
@@ -173,6 +176,40 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
 
         mBanner = (Banner) view.findViewById(R.id.banner);
         mListView = (FullListView) view.findViewById(R.id.flv_list);
+
+        errorView = view.findViewById(R.id.rv_empty);
+        contentLv = (ScrollView) view.findViewById(R.id.lv_content);
+
+        errorView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initData();
+            }
+        });
+
+        mXinyongkaShenqing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINYONGKA_OFFLINE, "预约办卡");
+                Umeng.onEvent(getActivity(),Umeng.EVENTID_GONGJU,Umeng.EVENTID_GONGJU,"预约办卡");
+            }
+        });
+
+        mZhaoDaikuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINGYONGKA_ONLING, "线上办卡");
+                Umeng.onEvent(getActivity(),Umeng.EVENTID_GONGJU,Umeng.EVENTID_GONGJU,"线上办卡");
+            }
+        });
+
+        mXinDaiYuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GlobalUtil.openWebview(getActivity(), Constant.URL_SHEBAO, "社保办理",true);
+                Umeng.onEvent(getActivity(),Umeng.EVENTID_GONGJU,Umeng.EVENTID_GONGJU,"社保办理");
+            }
+        });
 
     }
 
@@ -204,13 +241,20 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
 
         switch (position) {
             case 0:
-                Umeng.onEvent(getContext(), Umeng.EVENTID_BANNER_1);
+                Umeng.onEvent(getContext(), Umeng.EVENTID_BANNER,Umeng.EVENTID_BANNER,"1");
                 GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_HAODAI, getString(R.string.d_haodai));
                 break;
             case 1:
-                Umeng.onEvent(getContext(), Umeng.EVENTID_BANNER_2);
+                Umeng.onEvent(getContext(), Umeng.EVENTID_BANNER,Umeng.EVENTID_BANNER,"2");
                 GlobalUtil.openWebview(getActivity(), Constant.URL_DAIKUAN_RONG360, getString(R.string.d_rong360));
-
+                break;
+            case 2:
+                Umeng.onEvent(getContext(), Umeng.EVENTID_BANNER,Umeng.EVENTID_BANNER,"3");
+                GlobalUtil.openWebview(getActivity(), Constant.URL_CAIPIAP, "彩票购买");
+                break;
+            case 3:
+                Umeng.onEvent(getContext(), Umeng.EVENTID_BANNER,Umeng.EVENTID_BANNER,"4");
+                GlobalUtil.openWebview(getActivity(), Constant.URL_SHEBAO, "社保办理",true);
                 break;
         }
     }

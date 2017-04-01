@@ -105,7 +105,7 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         isAutoPlay = true;
         isLoopPlay = true;
         isScall = true;
-        delayTime = 2000;
+        delayTime = 5000;
         imageViews = new ArrayList<>();
         imageUrls = new ArrayList();
         indicatorImages = new ArrayList<>();

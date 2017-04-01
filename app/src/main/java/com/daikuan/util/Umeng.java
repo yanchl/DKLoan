@@ -12,6 +12,13 @@ public class Umeng {
 
 	private static final String COMMON_KEY = "paykey";
 
+
+	public static final String EVENTID_DAIKUAN_TUIJIAN = "daikuantuijian";
+	public static final String EVENTID_DAIKUAN_FENLEI = "daikuanfenlei";
+	public static final String EVENTID_BANNER = "banner";
+	public static final String EVENTID_GONGJU = "gongju";
+	public static final String EVENTID_DAIKUAN_DAQUAN = "daikuandaquan";
+
 	public static void reportPaysuccess(Context context) {
 	}
 

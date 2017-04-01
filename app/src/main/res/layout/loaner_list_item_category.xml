@@ -39,18 +39,9 @@
                 android:textColor="#666666"
                 android:textSize="16dip"
                 android:textStyle="italic"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="15dp"/>
 
-            <TextView
-                android:id="@+id/tv_desc"
-                android:layout_width="wrap_content"
-                android:layout_height="28dp"
-                android:paddingRight="12dp"
-                android:text="额度2千~3000万,提交申请后专业信贷员1对1帮您选择产品"
-                android:textColor="#4B7AC2"
-                android:textSize="12dip"
-                android:layout_below="@id/tv_title"
-                android:layout_marginTop="5dp"/>
+
 
 
 
@@ -59,15 +50,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="12dp"
-                    android:text="申请人数"
+                    android:text="额度"
                     android:textSize="12dp"
-                    android:layout_below="@id/tv_desc"/>
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/tv_title"/>
 
 
                 <TextView
                     android:id="@+id/tv_content2"
                     android:layout_toRightOf="@id/tv_content1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/tv_content1"
                     android:paddingRight="12dp"

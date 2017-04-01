@@ -12,7 +12,8 @@
         android:scrollbarFadeDuration="4000"
         />
 
-    <include layout="@layout/page_header_area_1" />
+    <include layout="@layout/page_header_area_1"
+        android:id="@+id/header_view"/>
 
     <ImageView
         android:id="@+id/goback"

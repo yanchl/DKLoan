@@ -38,6 +38,7 @@
 
 
 <ScrollView
+    android:id="@+id/lv_content"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="#F2F2F2"
@@ -56,8 +57,9 @@
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="90dp"
             android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
             android:background="#ffffff"
             android:orientation="horizontal">
 
@@ -73,14 +75,14 @@
                 <ImageView
                     android:layout_width="50dip"
                     android:layout_height="50dip"
-                    android:layout_marginTop="5dip"
-                    android:src="@drawable/banxinyongka" />
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/yinhangbanka" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dip"
-                    android:text="信用卡申请"
+                    android:layout_marginTop="5dip"
+                    android:text="预约办卡"
                     android:textColor="#666666"
                     android:textSize="14dip" />
             </LinearLayout>
@@ -97,14 +99,14 @@
                 <ImageView
                     android:layout_width="50dip"
                     android:layout_height="50dip"
-                    android:layout_marginTop="5dip"
-                    android:src="@drawable/kuaisudaikuan" />
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/xianshangbanka" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dip"
-                    android:text="找贷款"
+                    android:layout_marginTop="5dip"
+                    android:text="线上办卡"
                     android:textColor="#666666"
                     android:textSize="14dip" />
             </LinearLayout>
@@ -121,28 +123,30 @@
                 <ImageView
                     android:layout_width="50dip"
                     android:layout_height="50dip"
-                    android:layout_marginTop="5dip"
-                    android:src="@drawable/xindaijingli" />
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/shebao" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dip"
-                    android:text="信贷员抢单"
+                    android:layout_marginTop="5dip"
+                    android:text="社保办理"
                     android:textColor="#666666"
                     android:textSize="14dip" />
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center_horizontal"
-            android:text="以下平台同时申请,贷款成功率100%"
-            android:textColor="#EF6668"
+        <!--<TextView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="以下平台同时申请,贷款成功率100%"-->
+            <!--android:textColor="#EF6668"-->
 
-            android:textSize="14dip" />
+            <!--android:textSize="14dip" />-->
+
+
         <com.daikuan.view.FullListView
             android:id="@+id/flv_list"
             android:divider="#00ffffff"

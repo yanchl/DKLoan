@@ -18,8 +18,8 @@ import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {
 
-	ImageView mImage1, mImage2;
-	TextView mText1JianDai, mText2Daikuan;
+	ImageView mImage1, mImage2,mImage3;
+	TextView mText1JianDai, mText2Daikuan,mText3Banka;
 	ViewPager mViewPager;
 	ArrayList<Fragment> mFragments;
 	MyFragmentAdapter mFragmentAdapter;
@@ -51,12 +51,12 @@ public class MainActivity extends FragmentActivity {
 
 			}
 		});
-//		mText3Banka.setOnClickListener(new View.OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				mViewPager.setCurrentItem(1, false);
-//			}
-//		});
+		mText3Banka.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				mViewPager.setCurrentItem(2, false);
+			}
+		});
 		mViewPager
 				.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 					@Override
@@ -87,12 +87,12 @@ public class MainActivity extends FragmentActivity {
 		mHeaderBack.setVisibility(View.INVISIBLE);
 		mHeaderTitle.setText(getString(R.string.header_title_yijiandaikuan));
 
-		mText1JianDai = (TextView) findViewById(R.id.yijiandaikuan);
-		mText2Daikuan = (TextView) findViewById(R.id.banka);
-//		mText3Banka = (TextView) findViewById(R.id.banka);
+		mText1JianDai = (TextView) findViewById(R.id.tuijiandaikuan);
+		mText2Daikuan = (TextView) findViewById(R.id.quanbudaikuan);
+		mText3Banka = (TextView) findViewById(R.id.kuaijiedaikuan);
 		mImage1 = (ImageView) findViewById(R.id.image_1);
 		mImage2 = (ImageView) findViewById(R.id.image_2);
-//		mImage3 = (ImageView) findViewById(R.id.image_3);
+		mImage3 = (ImageView) findViewById(R.id.image_3);
 		showItem1();
 		mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
@@ -102,8 +102,8 @@ public class MainActivity extends FragmentActivity {
 		}
 		// 正在发送定时器管理
 		mFragments.add(new PageFragDKTuijian());
-		mFragments.add(new PageFragYiJianDai());
-//		mFragments.add(new PageFragGongJu());
+		mFragments.add(new PageFragDKDaquan());
+		mFragments.add(new PageFragDKKuaisu());
 
 		if (mFragmentAdapter == null) {
 			mFragmentAdapter = new MyFragmentAdapter(
@@ -116,23 +116,23 @@ public class MainActivity extends FragmentActivity {
 		mText1JianDai.setTextColor(getResources().getColor(R.color.red_bg));
 		mText2Daikuan.setTextColor(getResources().getColor(
 				R.color.bottom_black_color));
-//		mText3Banka.setTextColor(getResources().getColor(
-//				R.color.bottom_black_color));
+		mText3Banka.setTextColor(getResources().getColor(
+				R.color.bottom_black_color));
 		mImage1.setVisibility(View.VISIBLE);
 		mImage2.setVisibility(View.INVISIBLE);
-//		mImage3.setVisibility(View.INVISIBLE);
+		mImage3.setVisibility(View.INVISIBLE);
 		mHeaderTitle.setText(R.string.header_title_yijiandaikuan);
 	}
 
 	private void showItem3() {
 		mText1JianDai.setTextColor(getResources().getColor(
 				R.color.bottom_black_color));
-		mText2Daikuan.setTextColor(getResources().getColor(R.color.red_bg));
-//		mText3Banka.setTextColor(getResources().getColor(
-//				R.color.bottom_black_color));
+		mText2Daikuan.setTextColor(getResources().getColor(R.color.bottom_black_color));
+		mText3Banka.setTextColor(getResources().getColor(
+				R.color.red_bg));
 		mImage1.setVisibility(View.INVISIBLE);
-		mImage2.setVisibility(View.VISIBLE);
-//		mImage3.setVisibility(View.INVISIBLE);
+		mImage2.setVisibility(View.INVISIBLE);
+		mImage3.setVisibility(View.VISIBLE);
 		mHeaderTitle.setText(R.string.header_title_daikuan);
 	}
 
@@ -140,12 +140,12 @@ public class MainActivity extends FragmentActivity {
 		mText1JianDai.setTextColor(getResources().getColor(
 				R.color.bottom_black_color));
 		mText2Daikuan.setTextColor(getResources().getColor(
-				R.color.bottom_black_color));
-//		mText3Banka.setTextColor(getResources().getColor(R.color.red_bg));
+				R.color.red_bg));
+		mText3Banka.setTextColor(getResources().getColor(R.color.bottom_black_color));
 		mImage1.setVisibility(View.INVISIBLE);
 		mImage2.setVisibility(View.VISIBLE);
-//		mImage3.setVisibility(View.VISIBLE);
-		mHeaderTitle.setText("更多功能");
+		mImage3.setVisibility(View.INVISIBLE);
+		mHeaderTitle.setText("全部贷款");
 	}
 
 	@Override

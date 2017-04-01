@@ -47,13 +47,13 @@
                 android:layout_weight="1" >
 
                 <TextView
-                    android:id="@+id/yijiandaikuan"
+                    android:id="@+id/tuijiandaikuan"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:gravity="center"
-                    android:text="贷款大全"
+                    android:text="推荐贷款"
                     android:textColor="@color/red_bg"
                     android:textSize="14dip"
                     android:textStyle="bold" />
@@ -73,13 +73,13 @@
                 android:layout_weight="1" >
 
                 <TextView
-                    android:id="@+id/banka"
+                    android:id="@+id/quanbudaikuan"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:gravity="center"
-                    android:text="更多功能"
+                    android:text="全部贷款"
                     android:textColor="@color/bottom_black_color"
                     android:textSize="14dip"
                      />
@@ -92,30 +92,30 @@
                     android:background="@color/red_bg" />
             </RelativeLayout>
 
-            <!--<RelativeLayout-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1" >-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
 
-                <!--<TextView-->
-                    <!--android:id="@+id/bandai"-->
-                    <!--android:layout_width="fill_parent"-->
-                    <!--android:layout_height="fill_parent"-->
-                    <!--android:layout_centerHorizontal="true"-->
-                    <!--android:layout_centerVertical="true"-->
-                    <!--android:gravity="center"-->
-                    <!--android:text="工具箱"-->
-                    <!--android:textColor="@color/bottom_black_color"-->
-                    <!--android:textSize="14dip"-->
-                     <!--/>-->
+                <TextView
+                    android:id="@+id/kuaijiedaikuan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="快捷贷款"
+                    android:textColor="@color/bottom_black_color"
+                    android:textSize="14dip"
+                     />
 
-                <!--<ImageView-->
-                    <!--android:id="@+id/image_2"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="5dip"-->
-                    <!--android:layout_alignParentBottom="true"-->
-                    <!--android:background="@color/red_bg" />-->
-            <!--</RelativeLayout>-->
+                <ImageView
+                    android:id="@+id/image_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/red_bg" />
+            </RelativeLayout>
 
         </LinearLayout>
     </RelativeLayout>

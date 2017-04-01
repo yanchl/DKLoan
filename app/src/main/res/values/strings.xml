@@ -3,9 +3,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="header_title_yijiandaikuan">贷款大全</string>
-    <string name="header_title_xinyongka">信用卡</string>
-    <string name="header_title_daikuan">工具箱</string>
+    <string name="header_title_yijiandaikuan">推荐贷款</string>
+    <string name="header_title_xinyongka">全部退款</string>
+    <string name="header_title_daikuan">快捷贷款</string>
     <string name="double_click_back">再按一次即可退出。</string>
     <string name="d_haodai">好贷网贷款</string>
     <string name="d_rong360">融360贷款</string>
