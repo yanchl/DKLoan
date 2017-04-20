@@ -127,7 +127,7 @@ public class RecommendLoanerListAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Umeng.onEvent(mContext, Umeng.EVENTID_DAIKUAN_TUIJIAN,Umeng.EVENTID_DAIKUAN_TUIJIAN,item.getName());
-                GlobalUtil.openWebview(mContext, item.getLoanUrl(), item.getName(),item.getMagrinTop());
+                GlobalUtil.openWebview(mContext, "http://click.xuezhionline.com/union/KeRmjH3XSr6r7sQaHDmf1w%3D%3D", item.getName(),item.getMagrinTop());
             }
         });
         return convertView;
