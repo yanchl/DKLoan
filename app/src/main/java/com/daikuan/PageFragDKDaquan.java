@@ -17,7 +17,7 @@ import com.daikuan.util.Umeng;
 
 public class PageFragDKDaquan extends Fragment{
 
-    private View loanView1,loanView2,loanView3,loanView4,loanView5,loanView6;
+    private View loanView1,loanView2,loanView3,loanView4,loanView5/*,loanView6*/;
 
 
 
@@ -83,12 +83,12 @@ public class PageFragDKDaquan extends Fragment{
                     startActivity(intent);
                     Umeng.onEvent(getActivity(),Umeng.EVENTID_DAIKUAN_DAQUAN,Umeng.EVENTID_DAIKUAN_DAQUAN,"5");
                     break;
-                case R.id.rl_loan_6:
-                    intent.putExtra("category",6);
-                    intent.putExtra("title","大学生贷款");
-                    startActivity(intent);
-                    Umeng.onEvent(getActivity(),Umeng.EVENTID_DAIKUAN_DAQUAN,Umeng.EVENTID_DAIKUAN_DAQUAN,"6");
-                    break;
+//                case R.id.rl_loan_6:
+//                    intent.putExtra("category",6);
+//                    intent.putExtra("title","大学生贷款");
+//                    startActivity(intent);
+//                    Umeng.onEvent(getActivity(),Umeng.EVENTID_DAIKUAN_DAQUAN,Umeng.EVENTID_DAIKUAN_DAQUAN,"6");
+//                    break;
                 default:
                     break;
 
@@ -109,14 +109,14 @@ public class PageFragDKDaquan extends Fragment{
         loanView3 = view.findViewById(R.id.rl_loan_3);
         loanView4 = view.findViewById(R.id.rl_loan_4);
         loanView5 = view.findViewById(R.id.rl_loan_5);
-        loanView6 = view.findViewById(R.id.rl_loan_6);
+//        loanView6 = view.findViewById(R.id.rl_loan_6);
 
         loanView1.setOnClickListener(mListener);
         loanView2.setOnClickListener(mListener);
         loanView3.setOnClickListener(mListener);
         loanView4.setOnClickListener(mListener);
         loanView5.setOnClickListener(mListener);
-        loanView6.setOnClickListener(mListener);
+//        loanView6.setOnClickListener(mListener);
     }
 
     @Override

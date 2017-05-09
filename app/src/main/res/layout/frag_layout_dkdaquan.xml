@@ -268,56 +268,56 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/rl_loan_6"
-            android:layout_width="fill_parent"
-            android:layout_height="90dip"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/all_loan_item_bg6"
-            android:paddingLeft="12dip">
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_loan_6"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="90dip"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/all_loan_item_bg6"-->
+            <!--android:paddingLeft="12dip">-->
 
-            <ImageView
-                android:id="@+id/iv_loan_6"
-                android:layout_width="50dip"
-                android:layout_height="50dip"
-                android:src="@drawable/fenlei6"
-                android:layout_centerVertical="true" />
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_loan_6"-->
+                <!--android:layout_width="50dip"-->
+                <!--android:layout_height="50dip"-->
+                <!--android:src="@drawable/fenlei6"-->
+                <!--android:layout_centerVertical="true" />-->
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="12dip"
-                android:layout_toRightOf="@+id/iv_loan_6">
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="12dip"-->
+                <!--android:layout_toRightOf="@+id/iv_loan_6">-->
 
-                <TextView
-                    android:id="@+id/tv_loan_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:text="大学生贷款"
-                    android:textColor="@android:color/white"
-                    android:textSize="16dip"
-                    android:textStyle="normal"
-                    />
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_loan_6"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="大学生贷款"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="16dip"-->
+                    <!--android:textStyle="normal"-->
+                    <!--/>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_loan_6"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:paddingRight="12dp"
-                    android:text="学生贷款还有优惠拿，额度100-50000元"
-                    android:textColor="#EDEDED"
-                    android:textSize="12dip" />
-            </RelativeLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/tv_loan_6"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:paddingRight="12dp"-->
+                    <!--android:text="学生贷款还有优惠拿，额度100-50000元"-->
+                    <!--android:textColor="#EDEDED"-->
+                    <!--android:textSize="12dip" />-->
+            <!--</RelativeLayout>-->
 
-        </RelativeLayout>
+        <!--</RelativeLayout>-->
     </LinearLayout>
 
 

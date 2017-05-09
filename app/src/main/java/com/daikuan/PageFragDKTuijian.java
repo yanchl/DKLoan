@@ -190,7 +190,7 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
         mXinyongkaShenqing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINYONGKA_OFFLINE, "预约办卡");
+                GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINYONGKA_OFFLINE, "预约办卡",false,true);
                 Umeng.onEvent(getActivity(),Umeng.EVENTID_GONGJU,Umeng.EVENTID_GONGJU,"预约办卡");
             }
         });
@@ -198,7 +198,7 @@ public class PageFragDKTuijian extends Fragment implements Banner.OnBannerListen
         mZhaoDaikuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINGYONGKA_ONLING, "线上办卡");
+                GlobalUtil.openWebview(getActivity(), Constant.URL_HAODAI_XINGYONGKA_ONLING, "线上办卡",false,true);
                 Umeng.onEvent(getActivity(),Umeng.EVENTID_GONGJU,Umeng.EVENTID_GONGJU,"线上办卡");
             }
         });

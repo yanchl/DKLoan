@@ -6,9 +6,9 @@ import android.content.Intent;
 import android.widget.Toast;
 
 public class GlobalUtil {
-	
+
 	public static void openWebview(Context context, String url, String title,
-			boolean marginTop) {
+								   boolean marginTop) {
 		Intent i = new Intent();
 		i.setClass(context, PageWebview.class);
 		i.putExtra(PageWebview.KEY_TITLE, title);
@@ -16,13 +16,24 @@ public class GlobalUtil {
 		i.putExtra(PageWebview.KEY_MARGINTOP, marginTop);
 		context.startActivity(i);
 	}
-	
+
 	public static void openWebview(Context context, String url, String title) {
 		Intent i = new Intent();
 		i.setClass(context, PageWebview.class);
 		i.putExtra(PageWebview.KEY_TITLE, title);
 		i.putExtra(PageWebview.KEY_URL, url);
 		i.putExtra(PageWebview.KEY_MARGINTOP, false);
+		context.startActivity(i);
+	}
+
+	public static void openWebview(Context context, String url, String title,
+								   boolean marginTop, boolean useIosUA) {
+		Intent i = new Intent();
+		i.setClass(context, PageWebview.class);
+		i.putExtra(PageWebview.KEY_TITLE, title);
+		i.putExtra(PageWebview.KEY_URL, url);
+		i.putExtra(PageWebview.KEY_MARGINTOP, marginTop);
+		i.putExtra(PageWebview.KEY_USE_IOS_UA, useIosUA);
 		context.startActivity(i);
 	}
 	

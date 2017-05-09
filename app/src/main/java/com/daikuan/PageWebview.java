@@ -121,7 +121,12 @@ public class PageWebview extends Activity {
 
 	private void initWebview() {
 		WebSettings settings = mWebview.getSettings();
-		settings.setUserAgentString(Constant.UA);
+		if (isIosUa) {
+			settings.setUserAgentString(Constant.UA_IOS);
+		} else {
+			settings.setUserAgentString(Constant.UA_ANDROID);
+		}
+
 		settings.setJavaScriptEnabled(true);
 		settings.setLoadsImagesAutomatically(true);
 		settings.setSupportZoom(true);
@@ -202,6 +207,7 @@ public class PageWebview extends Activity {
 			mTitleStr = i.getStringExtra(KEY_TITLE);
 			mUrl = i.getStringExtra(KEY_URL);
 			mMarginTop = i.getBooleanExtra(KEY_MARGINTOP, false);
+			isIosUa = i.getBooleanExtra(KEY_USE_IOS_UA, false);
 			return true;
 		} else {
 			return false;

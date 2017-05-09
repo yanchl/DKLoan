@@ -7,6 +7,11 @@ public class Constant {
 	   public static  String UA = "Mozilla/5.0 (Linux; U; " +
 		        "Android 3.1; en-us; Xoom Build/HMJ25) AppleWebKit/534.13 " +
 		        "(KHTML, like Gecko) Version/4.0 Safari/534.13";
+
+	public static String UA_IOS = "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.3 (KHTML, like Gecko) Version/8.0 Mobile/12A4345d Safari/600.1.4";
+	public static String UA_ANDROID = "Mozilla/5.0 (Linux; U; "
+			+ "Android 3.1; en-us; Xoom Build/HMJ25) AppleWebKit/534.13 "
+			+ "(KHTML, like Gecko) Version/4.0 Safari/534.13";
 	//好贷网贷款
 	public static String URL_DAIKUAN_HAODAI = "https://loan.rongba.com/h5tuiguang/jff?ref=hd_11016980";
 	//融360贷款
